@@ -63,7 +63,7 @@
         FORMAT_DEFAULTS;
 
     estraverse = require('../estraverse/estraverse.js');
-    esutils = require('esutils');
+    esutils = require('../esutils/esutils.js');
 
     Syntax = {
         AssignmentExpression: 'AssignmentExpression',
