@@ -7,16 +7,20 @@ import Container from './Components/Container';
 import Fuck from './Components/Fuck.js';
 import Hotdamn from './Components/Hotdamn';
 import Shit from './Components/Shit';
+import Compo2 from './Compo2';
+import Comp3 from './folder1/folder2/Comp3';
 
 class App extends Component {
   render() {
     return (
     <Router>
       <div className="App">
+        <Compo2 />
         <Route exact path="/" component={Container}/>
         <Route path="/fuck" component={Fuck}/>
         <Route path="/shit" component={Shit}/>
         <Route path="/hotdamn" component={Hotdamn}/>
+        <Comp3 />
       </div>
     </Router>
     );
