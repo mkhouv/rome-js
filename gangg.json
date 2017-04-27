@@ -1,0 +1,639 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "React"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Component"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "Component"
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "react",
+        "raw": "'react'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "logo"
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "./logo.svg",
+        "raw": "'./logo.svg'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [],
+      "source": {
+        "type": "Literal",
+        "value": "./App.css",
+        "raw": "'./App.css'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Router"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "BrowserRouter"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Route"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "Route"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Link"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "Link"
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "react-router-dom",
+        "raw": "'react-router-dom'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Redirect"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "Redirect"
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "react-router",
+        "raw": "'react-router'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Container"
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "./Components/Container",
+        "raw": "'./Components/Container'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Fuck"
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "./Components/Fuck",
+        "raw": "'./Components/Fuck'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Hotdamn"
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "./Components/Hotdamn",
+        "raw": "'./Components/Hotdamn'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Shit"
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "./Components/Shit",
+        "raw": "'./Components/Shit'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Compo2"
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "./Compo2",
+        "raw": "'./Compo2'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Comp3"
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "./folder1/folder2/Comp3",
+        "raw": "'./folder1/folder2/Comp3'"
+      }
+    },
+    {
+      "type": "ClassDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "App"
+      },
+      "superClass": {
+        "type": "Identifier",
+        "name": "Component"
+      },
+      "body": {
+        "type": "ClassBody",
+        "body": [
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "render"
+            },
+            "computed": false,
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ReturnStatement",
+                    "argument": {
+                      "type": "JSXElement",
+                      "openingElement": {
+                        "type": "JSXOpeningElement",
+                        "name": {
+                          "type": "JSXIdentifier",
+                          "name": "div"
+                        },
+                        "selfClosing": false,
+                        "attributes": []
+                      },
+                      "children": [
+                        {
+                          "type": "JSXText",
+                          "value": " \n    ",
+                          "raw": " \n    "
+                        },
+                        {
+                          "type": "JSXElement",
+                          "openingElement": {
+                            "type": "JSXOpeningElement",
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "name": "Router"
+                            },
+                            "selfClosing": false,
+                            "attributes": []
+                          },
+                          "children": [
+                            {
+                              "type": "JSXText",
+                              "value": "\n      ",
+                              "raw": "\n      "
+                            },
+                            {
+                              "type": "JSXElement",
+                              "openingElement": {
+                                "type": "JSXOpeningElement",
+                                "name": {
+                                  "type": "JSXIdentifier",
+                                  "name": "div"
+                                },
+                                "selfClosing": false,
+                                "attributes": [
+                                  {
+                                    "type": "JSXAttribute",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "className"
+                                    },
+                                    "value": {
+                                      "type": "Literal",
+                                      "value": "App",
+                                      "raw": "\"App\""
+                                    }
+                                  }
+                                ]
+                              },
+                              "children": [
+                                {
+                                  "type": "JSXText",
+                                  "value": "\n        ",
+                                  "raw": "\n        "
+                                },
+                                {
+                                  "type": "JSXElement",
+                                  "openingElement": {
+                                    "type": "JSXOpeningElement",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "Compo2"
+                                    },
+                                    "selfClosing": true,
+                                    "attributes": [
+                                      {
+                                        "type": "JSXAttribute",
+                                        "name": {
+                                          "type": "JSXIdentifier",
+                                          "name": "path"
+                                        },
+                                        "value": {
+                                          "type": "Literal",
+                                          "value": "a",
+                                          "raw": "\"a\""
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "children": [],
+                                  "closingElement": null
+                                },
+                                {
+                                  "type": "JSXText",
+                                  "value": "\n        ",
+                                  "raw": "\n        "
+                                },
+                                {
+                                  "type": "JSXElement",
+                                  "openingElement": {
+                                    "type": "JSXOpeningElement",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "Route"
+                                    },
+                                    "selfClosing": true,
+                                    "attributes": [
+                                      {
+                                        "type": "JSXAttribute",
+                                        "name": {
+                                          "type": "JSXIdentifier",
+                                          "name": "exact"
+                                        },
+                                        "value": null
+                                      },
+                                      {
+                                        "type": "JSXAttribute",
+                                        "name": {
+                                          "type": "JSXIdentifier",
+                                          "name": "path"
+                                        },
+                                        "value": {
+                                          "type": "Literal",
+                                          "value": "/",
+                                          "raw": "\"/\""
+                                        }
+                                      },
+                                      {
+                                        "type": "JSXAttribute",
+                                        "name": {
+                                          "type": "JSXIdentifier",
+                                          "name": "component"
+                                        },
+                                        "value": {
+                                          "type": "JSXExpressionContainer",
+                                          "expression": {
+                                            "type": "Identifier",
+                                            "name": "Container"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "children": [],
+                                  "closingElement": null
+                                },
+                                {
+                                  "type": "JSXText",
+                                  "value": "\n        ",
+                                  "raw": "\n        "
+                                },
+                                {
+                                  "type": "JSXElement",
+                                  "openingElement": {
+                                    "type": "JSXOpeningElement",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "Route"
+                                    },
+                                    "selfClosing": true,
+                                    "attributes": [
+                                      {
+                                        "type": "JSXAttribute",
+                                        "name": {
+                                          "type": "JSXIdentifier",
+                                          "name": "path"
+                                        },
+                                        "value": {
+                                          "type": "Literal",
+                                          "value": "/fuck",
+                                          "raw": "\"/fuck\""
+                                        }
+                                      },
+                                      {
+                                        "type": "JSXAttribute",
+                                        "name": {
+                                          "type": "JSXIdentifier",
+                                          "name": "component"
+                                        },
+                                        "value": {
+                                          "type": "JSXExpressionContainer",
+                                          "expression": {
+                                            "type": "Identifier",
+                                            "name": "Fuck"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "children": [],
+                                  "closingElement": null
+                                },
+                                {
+                                  "type": "JSXText",
+                                  "value": "\n        ",
+                                  "raw": "\n        "
+                                },
+                                {
+                                  "type": "JSXElement",
+                                  "openingElement": {
+                                    "type": "JSXOpeningElement",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "Route"
+                                    },
+                                    "selfClosing": true,
+                                    "attributes": [
+                                      {
+                                        "type": "JSXAttribute",
+                                        "name": {
+                                          "type": "JSXIdentifier",
+                                          "name": "path"
+                                        },
+                                        "value": {
+                                          "type": "Literal",
+                                          "value": "/shit",
+                                          "raw": "\"/shit\""
+                                        }
+                                      },
+                                      {
+                                        "type": "JSXAttribute",
+                                        "name": {
+                                          "type": "JSXIdentifier",
+                                          "name": "component"
+                                        },
+                                        "value": {
+                                          "type": "JSXExpressionContainer",
+                                          "expression": {
+                                            "type": "Identifier",
+                                            "name": "Shit"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "children": [],
+                                  "closingElement": null
+                                },
+                                {
+                                  "type": "JSXText",
+                                  "value": "\n        ",
+                                  "raw": "\n        "
+                                },
+                                {
+                                  "type": "JSXElement",
+                                  "openingElement": {
+                                    "type": "JSXOpeningElement",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "Route"
+                                    },
+                                    "selfClosing": true,
+                                    "attributes": [
+                                      {
+                                        "type": "JSXAttribute",
+                                        "name": {
+                                          "type": "JSXIdentifier",
+                                          "name": "path"
+                                        },
+                                        "value": {
+                                          "type": "Literal",
+                                          "value": "/hotdamn",
+                                          "raw": "\"/hotdamn\""
+                                        }
+                                      },
+                                      {
+                                        "type": "JSXAttribute",
+                                        "name": {
+                                          "type": "JSXIdentifier",
+                                          "name": "component"
+                                        },
+                                        "value": {
+                                          "type": "JSXExpressionContainer",
+                                          "expression": {
+                                            "type": "Identifier",
+                                            "name": "Hotdamn"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "children": [],
+                                  "closingElement": null
+                                },
+                                {
+                                  "type": "JSXText",
+                                  "value": "\n        ",
+                                  "raw": "\n        "
+                                },
+                                {
+                                  "type": "JSXElement",
+                                  "openingElement": {
+                                    "type": "JSXOpeningElement",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "div"
+                                    },
+                                    "selfClosing": false,
+                                    "attributes": []
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "JSXElement",
+                                      "openingElement": {
+                                        "type": "JSXOpeningElement",
+                                        "name": {
+                                          "type": "JSXIdentifier",
+                                          "name": "Comp3"
+                                        },
+                                        "selfClosing": true,
+                                        "attributes": []
+                                      },
+                                      "children": [],
+                                      "closingElement": null
+                                    }
+                                  ],
+                                  "closingElement": {
+                                    "type": "JSXClosingElement",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "div"
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "JSXText",
+                                  "value": "\n      ",
+                                  "raw": "\n      "
+                                }
+                              ],
+                              "closingElement": {
+                                "type": "JSXClosingElement",
+                                "name": {
+                                  "type": "JSXIdentifier",
+                                  "name": "div"
+                                }
+                              }
+                            },
+                            {
+                              "type": "JSXText",
+                              "value": "\n    ",
+                              "raw": "\n    "
+                            }
+                          ],
+                          "closingElement": {
+                            "type": "JSXClosingElement",
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "name": "Router"
+                            }
+                          }
+                        },
+                        {
+                          "type": "JSXText",
+                          "value": "\n    ",
+                          "raw": "\n    "
+                        }
+                      ],
+                      "closingElement": {
+                        "type": "JSXClosingElement",
+                        "name": {
+                          "type": "JSXIdentifier",
+                          "name": "div"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "generator": false,
+              "expression": false
+            },
+            "kind": "method",
+            "static": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "Identifier",
+        "name": "App"
+      }
+    }
+  ],
+  "sourceType": "module"
+}
