@@ -1,0 +1,234 @@
+[
+  {
+    "type": "JSXOpeningElement",
+    "name": {
+      "type": "JSXIdentifier",
+      "name": "div"
+    },
+    "selfClosing": false,
+    "attributes": []
+  },
+  {
+    "type": "JSXOpeningElement",
+    "name": {
+      "type": "JSXIdentifier",
+      "name": "Router"
+    },
+    "selfClosing": false,
+    "attributes": []
+  },
+  {
+    "type": "JSXOpeningElement",
+    "name": {
+      "type": "JSXIdentifier",
+      "name": "div"
+    },
+    "selfClosing": false,
+    "attributes": [
+      {
+        "type": "JSXAttribute",
+        "name": {
+          "type": "JSXIdentifier",
+          "name": "className"
+        },
+        "value": {
+          "type": "Literal",
+          "value": "App",
+          "raw": "\"App\""
+        }
+      }
+    ]
+  },
+  {
+    "type": "JSXOpeningElement",
+    "name": {
+      "type": "JSXIdentifier",
+      "name": "Compo2"
+    },
+    "selfClosing": true,
+    "attributes": [
+      {
+        "type": "JSXAttribute",
+        "name": {
+          "type": "JSXIdentifier",
+          "name": "path"
+        },
+        "value": {
+          "type": "Literal",
+          "value": "a",
+          "raw": "\"a\""
+        }
+      }
+    ]
+  },
+  {
+    "type": "JSXOpeningElement",
+    "name": {
+      "type": "JSXIdentifier",
+      "name": "Route"
+    },
+    "selfClosing": true,
+    "attributes": [
+      {
+        "type": "JSXAttribute",
+        "name": {
+          "type": "JSXIdentifier",
+          "name": "exact"
+        },
+        "value": null
+      },
+      {
+        "type": "JSXAttribute",
+        "name": {
+          "type": "JSXIdentifier",
+          "name": "path"
+        },
+        "value": {
+          "type": "Literal",
+          "value": "/",
+          "raw": "\"/\""
+        }
+      },
+      {
+        "type": "JSXAttribute",
+        "name": {
+          "type": "JSXIdentifier",
+          "name": "component"
+        },
+        "value": {
+          "type": "JSXExpressionContainer",
+          "expression": {
+            "type": "Identifier",
+            "name": "Container"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "JSXOpeningElement",
+    "name": {
+      "type": "JSXIdentifier",
+      "name": "Route"
+    },
+    "selfClosing": true,
+    "attributes": [
+      {
+        "type": "JSXAttribute",
+        "name": {
+          "type": "JSXIdentifier",
+          "name": "path"
+        },
+        "value": {
+          "type": "Literal",
+          "value": "/fuck",
+          "raw": "\"/fuck\""
+        }
+      },
+      {
+        "type": "JSXAttribute",
+        "name": {
+          "type": "JSXIdentifier",
+          "name": "component"
+        },
+        "value": {
+          "type": "JSXExpressionContainer",
+          "expression": {
+            "type": "Identifier",
+            "name": "Fuck"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "JSXOpeningElement",
+    "name": {
+      "type": "JSXIdentifier",
+      "name": "Route"
+    },
+    "selfClosing": true,
+    "attributes": [
+      {
+        "type": "JSXAttribute",
+        "name": {
+          "type": "JSXIdentifier",
+          "name": "path"
+        },
+        "value": {
+          "type": "Literal",
+          "value": "/shit",
+          "raw": "\"/shit\""
+        }
+      },
+      {
+        "type": "JSXAttribute",
+        "name": {
+          "type": "JSXIdentifier",
+          "name": "component"
+        },
+        "value": {
+          "type": "JSXExpressionContainer",
+          "expression": {
+            "type": "Identifier",
+            "name": "Shit"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "JSXOpeningElement",
+    "name": {
+      "type": "JSXIdentifier",
+      "name": "Route"
+    },
+    "selfClosing": true,
+    "attributes": [
+      {
+        "type": "JSXAttribute",
+        "name": {
+          "type": "JSXIdentifier",
+          "name": "path"
+        },
+        "value": {
+          "type": "Literal",
+          "value": "/hotdamn",
+          "raw": "\"/hotdamn\""
+        }
+      },
+      {
+        "type": "JSXAttribute",
+        "name": {
+          "type": "JSXIdentifier",
+          "name": "component"
+        },
+        "value": {
+          "type": "JSXExpressionContainer",
+          "expression": {
+            "type": "Identifier",
+            "name": "Hotdamn"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "JSXOpeningElement",
+    "name": {
+      "type": "JSXIdentifier",
+      "name": "div"
+    },
+    "selfClosing": false,
+    "attributes": []
+  },
+  {
+    "type": "JSXOpeningElement",
+    "name": {
+      "type": "JSXIdentifier",
+      "name": "Comp3"
+    },
+    "selfClosing": true,
+    "attributes": []
+  }
+]
