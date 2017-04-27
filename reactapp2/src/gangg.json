@@ -1,0 +1,460 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "React"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Component"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "Component"
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "react",
+        "raw": "'react'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Router"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "BrowserRouter"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Route"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "Route"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "Link"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "Link"
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "react-router-dom",
+        "raw": "'react-router-dom'"
+      }
+    },
+    {
+      "type": "ClassDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "Container"
+      },
+      "superClass": {
+        "type": "Identifier",
+        "name": "Component"
+      },
+      "body": {
+        "type": "ClassBody",
+        "body": [
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "render"
+            },
+            "computed": false,
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ReturnStatement",
+                    "argument": {
+                      "type": "JSXElement",
+                      "openingElement": {
+                        "type": "JSXOpeningElement",
+                        "name": {
+                          "type": "JSXIdentifier",
+                          "name": "div"
+                        },
+                        "selfClosing": false,
+                        "attributes": [
+                          {
+                            "type": "JSXAttribute",
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "name": "className"
+                            },
+                            "value": {
+                              "type": "Literal",
+                              "value": "Container",
+                              "raw": "\"Container\""
+                            }
+                          }
+                        ]
+                      },
+                      "children": [
+                        {
+                          "type": "JSXText",
+                          "value": "\n      ",
+                          "raw": "\n      "
+                        },
+                        {
+                          "type": "JSXElement",
+                          "openingElement": {
+                            "type": "JSXOpeningElement",
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "name": "ul"
+                            },
+                            "selfClosing": false,
+                            "attributes": []
+                          },
+                          "children": [
+                            {
+                              "type": "JSXText",
+                              "value": "\n        ",
+                              "raw": "\n        "
+                            },
+                            {
+                              "type": "JSXElement",
+                              "openingElement": {
+                                "type": "JSXOpeningElement",
+                                "name": {
+                                  "type": "JSXIdentifier",
+                                  "name": "Link"
+                                },
+                                "selfClosing": false,
+                                "attributes": [
+                                  {
+                                    "type": "JSXAttribute",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "to"
+                                    },
+                                    "value": {
+                                      "type": "Literal",
+                                      "value": "fuck",
+                                      "raw": "\"fuck\""
+                                    }
+                                  }
+                                ]
+                              },
+                              "children": [
+                                {
+                                  "type": "JSXElement",
+                                  "openingElement": {
+                                    "type": "JSXOpeningElement",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "li"
+                                    },
+                                    "selfClosing": false,
+                                    "attributes": []
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "JSXText",
+                                      "value": "1",
+                                      "raw": "1"
+                                    }
+                                  ],
+                                  "closingElement": {
+                                    "type": "JSXClosingElement",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "li"
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "JSXText",
+                                  "value": " ",
+                                  "raw": " "
+                                }
+                              ],
+                              "closingElement": {
+                                "type": "JSXClosingElement",
+                                "name": {
+                                  "type": "JSXIdentifier",
+                                  "name": "Link"
+                                }
+                              }
+                            },
+                            {
+                              "type": "JSXText",
+                              "value": "\n        ",
+                              "raw": "\n        "
+                            },
+                            {
+                              "type": "JSXElement",
+                              "openingElement": {
+                                "type": "JSXOpeningElement",
+                                "name": {
+                                  "type": "JSXIdentifier",
+                                  "name": "Link"
+                                },
+                                "selfClosing": false,
+                                "attributes": [
+                                  {
+                                    "type": "JSXAttribute",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "to"
+                                    },
+                                    "value": {
+                                      "type": "Literal",
+                                      "value": "shit",
+                                      "raw": "\"shit\""
+                                    }
+                                  }
+                                ]
+                              },
+                              "children": [
+                                {
+                                  "type": "JSXElement",
+                                  "openingElement": {
+                                    "type": "JSXOpeningElement",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "li"
+                                    },
+                                    "selfClosing": false,
+                                    "attributes": []
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "JSXText",
+                                      "value": "2",
+                                      "raw": "2"
+                                    }
+                                  ],
+                                  "closingElement": {
+                                    "type": "JSXClosingElement",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "li"
+                                    }
+                                  }
+                                }
+                              ],
+                              "closingElement": {
+                                "type": "JSXClosingElement",
+                                "name": {
+                                  "type": "JSXIdentifier",
+                                  "name": "Link"
+                                }
+                              }
+                            },
+                            {
+                              "type": "JSXText",
+                              "value": "\n        ",
+                              "raw": "\n        "
+                            },
+                            {
+                              "type": "JSXElement",
+                              "openingElement": {
+                                "type": "JSXOpeningElement",
+                                "name": {
+                                  "type": "JSXIdentifier",
+                                  "name": "Link"
+                                },
+                                "selfClosing": false,
+                                "attributes": [
+                                  {
+                                    "type": "JSXAttribute",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "to"
+                                    },
+                                    "value": {
+                                      "type": "Literal",
+                                      "value": "hotdamn",
+                                      "raw": "\"hotdamn\""
+                                    }
+                                  }
+                                ]
+                              },
+                              "children": [
+                                {
+                                  "type": "JSXElement",
+                                  "openingElement": {
+                                    "type": "JSXOpeningElement",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "li"
+                                    },
+                                    "selfClosing": false,
+                                    "attributes": []
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "JSXText",
+                                      "value": "3",
+                                      "raw": "3"
+                                    }
+                                  ],
+                                  "closingElement": {
+                                    "type": "JSXClosingElement",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "li"
+                                    }
+                                  }
+                                }
+                              ],
+                              "closingElement": {
+                                "type": "JSXClosingElement",
+                                "name": {
+                                  "type": "JSXIdentifier",
+                                  "name": "Link"
+                                }
+                              }
+                            },
+                            {
+                              "type": "JSXText",
+                              "value": "\n        ",
+                              "raw": "\n        "
+                            },
+                            {
+                              "type": "JSXElement",
+                              "openingElement": {
+                                "type": "JSXOpeningElement",
+                                "name": {
+                                  "type": "JSXIdentifier",
+                                  "name": "Link"
+                                },
+                                "selfClosing": false,
+                                "attributes": [
+                                  {
+                                    "type": "JSXAttribute",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "to"
+                                    },
+                                    "value": {
+                                      "type": "Literal",
+                                      "value": "fuck",
+                                      "raw": "\"fuck\""
+                                    }
+                                  }
+                                ]
+                              },
+                              "children": [
+                                {
+                                  "type": "JSXElement",
+                                  "openingElement": {
+                                    "type": "JSXOpeningElement",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "li"
+                                    },
+                                    "selfClosing": false,
+                                    "attributes": []
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "JSXText",
+                                      "value": "4",
+                                      "raw": "4"
+                                    }
+                                  ],
+                                  "closingElement": {
+                                    "type": "JSXClosingElement",
+                                    "name": {
+                                      "type": "JSXIdentifier",
+                                      "name": "li"
+                                    }
+                                  }
+                                }
+                              ],
+                              "closingElement": {
+                                "type": "JSXClosingElement",
+                                "name": {
+                                  "type": "JSXIdentifier",
+                                  "name": "Link"
+                                }
+                              }
+                            },
+                            {
+                              "type": "JSXText",
+                              "value": "\n      ",
+                              "raw": "\n      "
+                            }
+                          ],
+                          "closingElement": {
+                            "type": "JSXClosingElement",
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "name": "ul"
+                            }
+                          }
+                        },
+                        {
+                          "type": "JSXText",
+                          "value": "\n      ",
+                          "raw": "\n      "
+                        }
+                      ],
+                      "closingElement": {
+                        "type": "JSXClosingElement",
+                        "name": {
+                          "type": "JSXIdentifier",
+                          "name": "div"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "generator": false,
+              "expression": false
+            },
+            "kind": "method",
+            "static": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "Identifier",
+        "name": "Container"
+      }
+    }
+  ],
+  "sourceType": "module"
+}
