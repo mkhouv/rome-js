@@ -2,25 +2,24 @@ const fs = require('fs');
 const esprima = require('esprima');
 const esquery = require('../.././esquery/esquery.js');
 const path = require('path');
-
-let masterComponent = [];
-
-let masterRoute;
-
 let counter = 0;
-
-
-function ASTParser (DIR, cwd = '.'){
-
-counter++;
+function ASTParser (filename){
 let allComponents = [];
-
+counter++;
 
 //./src/App.js
 //console.log(DIR)
-console.log(path.normalize(cwd + '/' + DIR + '.js'));
-let src = fs.readFileSync(path.normalize(cwd + '/' + DIR + '.js'));
-src = src.toString();
+// console.log(path.normalize(cwd + '/' + DIR + '.js'));
+// let src = fs.readFileSync(path.normalize(cwd + '/' + DIR + '.js'));
+// src = src.toString();
+
+  if (filename.charAt(0) == '.') filename = filename.slice(1);
+//   console.log(filename)
+  let src = fs.readFileSync(path.join(__dirname + filename + '.js'));
+  src = src.toString();
+  let file = filename.split('/');
+  let fi = file.pop();
+  file = file.join('');
 
 let ast = esprima.parse(src, {
     sourceType: 'module',
@@ -60,8 +59,6 @@ for (let i = 0; i < identifiers.length; i += 1) {
         allComponents.push(identifiers[i].name);
     }
 }
-
-console.log(importVars)
 // console.log(__dirname, process.chdir("/") )
 if (allComponents.length > 0){
 allComponents.forEach((e) => {
@@ -72,21 +69,22 @@ allComponents.forEach((e) => {
     //     ASTParser(path.join(importVars[e].slice(2) + '.js'))
     // } else {
     //      ASTParser(path.join(importVars[e] + '.js'))
-    // }
-    // if (!cwd) {
-        let cwd = importVars[e].split('/');
-        //console.log(__dirname.split("/").concat(masterRoute))
-         let idontcarewhatitis = cwd.pop()
-         cwd = cwd.join("/")
-    // }
-    //console.log(idontcarewhatitis);
-    ASTParser(idontcarewhatitis, cwd);
+    // }   
+    if (importVars[e].includes('/')) {
+    let dir = importVars[e].split('/');
+    let name = dir.pop();
+    if (dir[0] === '.') dir.shift();
+    dir = dir.join('/');
+    // if (dir.charAt(dir.length - 1) === '/') dir = dir.slice(0, -1);
+    dir = file + '/' + dir;
+    console.log(dir + '/' + name)
+    ASTParser('/' + dir + '/' + name);
+  }
     //console.log(path.normalize(cwd + "/" + e + '.js'));
 
 });
 }
 
-let filename = DIR + '.json'
 //fs.writeFileSync(filename, JSON.stringify(components, null, 2));
 fs.writeFileSync('gangg.json', JSON.stringify(ast, null, 2));
 }
