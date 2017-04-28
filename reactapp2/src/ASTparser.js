@@ -3,17 +3,9 @@ const esprima = require('esprima');
 const esquery = require('../.././esquery/esquery.js');
 const path = require('path');
 
-let counter = 0;
 let mainObj = {};
 
-let outputObj = {};
-
-function Component(name) {
-  this.name = name;
-}
-
 function ASTParser (entry){
-  counter++;
   const innerObj = {};
   const inner = {};
 
