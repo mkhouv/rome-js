@@ -12,6 +12,7 @@ class Fuck extends Component {
       <div className="Container">
         <Link to='/'> <h2>FUCK</h2> </Link>
         <Puckpuck />
+        <Container />
     </div>
     );
   }
