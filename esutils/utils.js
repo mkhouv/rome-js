@@ -24,10 +24,10 @@
 
 
 (function () {
-    'use strict';
+  'use strict';
 
-    exports.ast = require('./ast');
-    exports.code = require('./code');
-    exports.keyword = require('./keyword');
+  exports.ast = require('./ast');
+  exports.code = require('./code');
+  exports.keyword = require('./keyword');
 }());
 /* vim: set sw=4 ts=4 et tw=80 : */

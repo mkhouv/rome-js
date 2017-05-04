@@ -28,8 +28,8 @@
 (function (root, factory) {
   'use strict';
 
-    // Universal Module Definition (UMD) to support AMD, CommonJS/Node.js,
-    // and plain browser loading,
+  // Universal Module Definition (UMD) to support AMD, CommonJS/Node.js,
+  // and plain browser loading,
   if (typeof define === 'function' && define.amd) {
     define(['exports'], factory);
   } else if (typeof exports !== 'undefined') {
@@ -65,10 +65,10 @@
       if (obj.hasOwnProperty(key)) {
         val = obj[key];
         if (typeof val === 'object' && val !== null) {
-            ret[key] = deepCopy(val);
-          } else {
-            ret[key] = val;
-          }
+          ret[key] = deepCopy(val);
+        } else {
+          ret[key] = val;
+        }
       }
     }
     return ret;
@@ -85,8 +85,8 @@
   }
   ignoreJSHintError(shallowCopy);
 
-    // based on LLVM libc++ upper_bound / lower_bound
-    // MIT License
+  // based on LLVM libc++ upper_bound / lower_bound
+  // MIT License
 
   function upperBound(array, func) {
     var diff, len, i, current;
@@ -312,7 +312,7 @@
     YieldExpression: ['argument'],
   };
 
-    // unique id
+  // unique id
   BREAK = {};
   SKIP = {};
   REMOVE = {};
@@ -351,27 +351,27 @@
 
   function Controller() { }
 
-    // API:
-    // return property path array from root to current node
+  // API:
+  // return property path array from root to current node
   Controller.prototype.path = function path() {
     var i, iz, j, jz, result, element;
 
     function addToPath(result, path) {
       if (isArray(path)) {
         for (j = 0, jz = path.length; j < jz; ++j) {
-            result.push(path[j]);
-          }
+          result.push(path[j]);
+        }
       } else {
         result.push(path);
       }
     }
 
-        // root node
+    // root node
     if (!this.__current.path) {
       return null;
     }
 
-        // first node is sentinel, second node is root element
+    // first node is sentinel, second node is root element
     result = [];
     for (i = 2, iz = this.__leavelist.length; i < iz; ++i) {
       element = this.__leavelist[i];
@@ -381,19 +381,19 @@
     return result;
   };
 
-    // API:
-    // return type of current node
+  // API:
+  // return type of current node
   Controller.prototype.type = function () {
     var node = this.current();
     return node.type || this.__current.wrap;
   };
 
-    // API:
-    // return array of parent elements
+  // API:
+  // return array of parent elements
   Controller.prototype.parents = function parents() {
     var i, iz, result;
 
-        // first node is sentinel
+    // first node is sentinel
     result = [];
     for (i = 1, iz = this.__leavelist.length; i < iz; ++i) {
       result.push(this.__leavelist[i].node);
@@ -402,8 +402,8 @@
     return result;
   };
 
-    // API:
-    // return current node
+  // API:
+  // return current node
   Controller.prototype.current = function current() {
     return this.__current.node;
   };
@@ -424,26 +424,26 @@
     return result;
   };
 
-    // API:
-    // notify control skip / break
+  // API:
+  // notify control skip / break
   Controller.prototype.notify = function notify(flag) {
     this.__state = flag;
   };
 
-    // API:
-    // skip child nodes of current node
+  // API:
+  // skip child nodes of current node
   Controller.prototype.skip = function () {
     this.notify(SKIP);
   };
 
-    // API:
-    // break traversals
+  // API:
+  // break traversals
   Controller.prototype['break'] = function () {
     this.notify(BREAK);
   };
 
-    // API:
-    // remove node
+  // API:
+  // remove node
   Controller.prototype.remove = function () {
     this.notify(REMOVE);
   };
@@ -491,11 +491,11 @@
 
     sentinel = {};
 
-        // reference
+    // reference
     worklist = this.__worklist;
     leavelist = this.__leavelist;
 
-        // initialize
+    // initialize
     worklist.push(new Element(root, null, null, null));
     leavelist.push(new Element(null, null, null, null));
 
@@ -508,8 +508,8 @@
         ret = this.__execute(visitor.leave, element);
 
         if (this.__state === BREAK || ret === BREAK) {
-            return;
-          }
+          return;
+        }
         continue;
       }
 
@@ -517,54 +517,54 @@
         ret = this.__execute(visitor.enter, element);
 
         if (this.__state === BREAK || ret === BREAK) {
-            return;
-          }
+          return;
+        }
 
         worklist.push(sentinel);
         leavelist.push(element);
 
         if (this.__state === SKIP || ret === SKIP) {
-            continue;
-          }
+          continue;
+        }
 
         node = element.node;
         nodeType = element.wrap || node.type;
         candidates = this.__keys[nodeType];
         if (!candidates) {
-            if (this.__fallback) {
-                candidates = objectKeys(node);
-              } else {
-                throw new Error('Unknown node type ' + nodeType + '.');
-              }
+          if (this.__fallback) {
+            candidates = objectKeys(node);
+          } else {
+            throw new Error('Unknown node type ' + nodeType + '.');
           }
+        }
 
         current = candidates.length;
         while ((current -= 1) >= 0) {
-            key = candidates[current];
-            candidate = node[key];
-            if (!candidate) {
+          key = candidates[current];
+          candidate = node[key];
+          if (!candidate) {
+            continue;
+          }
+
+          if (isArray(candidate)) {
+            current2 = candidate.length;
+            while ((current2 -= 1) >= 0) {
+              if (!candidate[current2]) {
                 continue;
               }
-
-            if (isArray(candidate)) {
-                current2 = candidate.length;
-                while ((current2 -= 1) >= 0) {
-                    if (!candidate[current2]) {
-                        continue;
-                      }
-                    if (isProperty(nodeType, candidates[current])) {
-                        element = new Element(candidate[current2], [key, current2], 'Property', null);
-                      } else if (isNode(candidate[current2])) {
-                          element = new Element(candidate[current2], [key, current2], null, null);
-                        } else {
-                          continue;
-                        }
-                    worklist.push(element);
-                  }
-              } else if (isNode(candidate)) {
-                  worklist.push(new Element(candidate, key, null, null));
-                }
+              if (isProperty(nodeType, candidates[current])) {
+                element = new Element(candidate[current2], [key, current2], 'Property', null);
+              } else if (isNode(candidate[current2])) {
+                element = new Element(candidate[current2], [key, current2], null, null);
+              } else {
+                continue;
+              }
+              worklist.push(element);
+            }
+          } else if (isNode(candidate)) {
+            worklist.push(new Element(candidate, key, null, null));
           }
+        }
       }
     }
   };
@@ -577,21 +577,21 @@
         parent;
 
       if (element.ref.remove()) {
-                // When the reference is an element of an array.
+        // When the reference is an element of an array.
         key = element.ref.key;
         parent = element.ref.parent;
 
-                // If removed from array, then decrease following items' keys.
+        // If removed from array, then decrease following items' keys.
         i = worklist.length;
         while (i--) {
-            nextElem = worklist[i];
-            if (nextElem.ref && nextElem.ref.parent === parent) {
-                if (nextElem.ref.key < key) {
-                    break;
-                  }
-                --nextElem.ref.key;
-              }
+          nextElem = worklist[i];
+          if (nextElem.ref && nextElem.ref.parent === parent) {
+            if (nextElem.ref.key < key) {
+              break;
+            }
+            --nextElem.ref.key;
           }
+        }
       }
     }
 
@@ -613,11 +613,11 @@
 
     sentinel = {};
 
-        // reference
+    // reference
     worklist = this.__worklist;
     leavelist = this.__leavelist;
 
-        // initialize
+    // initialize
     outer = {
       root,
     };
@@ -633,29 +633,29 @@
 
         target = this.__execute(visitor.leave, element);
 
-                // node may be replaced with null,
-                // so distinguish between undefined and null in this place
+        // node may be replaced with null,
+        // so distinguish between undefined and null in this place
         if (target !== undefined && target !== BREAK && target !== SKIP && target !== REMOVE) {
-                    // replace
-            element.ref.replace(target);
-          }
+          // replace
+          element.ref.replace(target);
+        }
 
         if (this.__state === REMOVE || target === REMOVE) {
-            removeElem(element);
-          }
+          removeElem(element);
+        }
 
         if (this.__state === BREAK || target === BREAK) {
-            return outer.root;
-          }
+          return outer.root;
+        }
         continue;
       }
 
       target = this.__execute(visitor.enter, element);
 
-            // node may be replaced with null,
-            // so distinguish between undefined and null in this place
+      // node may be replaced with null,
+      // so distinguish between undefined and null in this place
       if (target !== undefined && target !== BREAK && target !== SKIP && target !== REMOVE) {
-                // replace
+        // replace
         element.ref.replace(target);
         element.node = target;
       }
@@ -669,7 +669,7 @@
         return outer.root;
       }
 
-            // node may be null
+      // node may be null
       node = element.node;
       if (!node) {
         continue;
@@ -686,10 +686,10 @@
       candidates = this.__keys[nodeType];
       if (!candidates) {
         if (this.__fallback) {
-            candidates = objectKeys(node);
-          } else {
-            throw new Error('Unknown node type ' + nodeType + '.');
-          }
+          candidates = objectKeys(node);
+        } else {
+          throw new Error('Unknown node type ' + nodeType + '.');
+        }
       }
 
       current = candidates.length;
@@ -697,27 +697,27 @@
         key = candidates[current];
         candidate = node[key];
         if (!candidate) {
-            continue;
-          }
+          continue;
+        }
 
         if (isArray(candidate)) {
-            current2 = candidate.length;
-            while ((current2 -= 1) >= 0) {
-                if (!candidate[current2]) {
-                    continue;
-                  }
-                if (isProperty(nodeType, candidates[current])) {
-                    element = new Element(candidate[current2], [key, current2], 'Property', new Reference(candidate, current2));
-                  } else if (isNode(candidate[current2])) {
-                      element = new Element(candidate[current2], [key, current2], null, new Reference(candidate, current2));
-                    } else {
-                      continue;
-                    }
-                worklist.push(element);
-              }
-          } else if (isNode(candidate)) {
-              worklist.push(new Element(candidate, key, null, new Reference(node, key)));
+          current2 = candidate.length;
+          while ((current2 -= 1) >= 0) {
+            if (!candidate[current2]) {
+              continue;
             }
+            if (isProperty(nodeType, candidates[current])) {
+              element = new Element(candidate[current2], [key, current2], 'Property', new Reference(candidate, current2));
+            } else if (isNode(candidate[current2])) {
+              element = new Element(candidate[current2], [key, current2], null, new Reference(candidate, current2));
+            } else {
+              continue;
+            }
+            worklist.push(element);
+          }
+        } else if (isNode(candidate)) {
+          worklist.push(new Element(candidate, key, null, new Reference(node, key)));
+        }
       }
     }
 
@@ -756,21 +756,21 @@
   }
 
   function attachComments(tree, providedComments, tokens) {
-        // At first, we should calculate extended comment ranges.
+    // At first, we should calculate extended comment ranges.
     var comments = [], comment, len, i, cursor;
 
     if (!tree.range) {
       throw new Error('attachComments needs range information');
     }
 
-        // tokens array is empty, we attach comments to tree as 'leadingComments'
+    // tokens array is empty, we attach comments to tree as 'leadingComments'
     if (!tokens.length) {
       if (providedComments.length) {
         for (i = 0, len = providedComments.length; i < len; i += 1) {
-            comment = deepCopy(providedComments[i]);
-            comment.extendedRange = [0, tree.range[0]];
-            comments.push(comment);
-          }
+          comment = deepCopy(providedComments[i]);
+          comment.extendedRange = [0, tree.range[0]];
+          comments.push(comment);
+        }
         tree.leadingComments = comments;
       }
       return tree;
@@ -780,37 +780,37 @@
       comments.push(extendCommentRange(deepCopy(providedComments[i]), tokens));
     }
 
-        // This is based on John Freeman's implementation.
+    // This is based on John Freeman's implementation.
     cursor = 0;
     traverse(tree, {
       enter(node) {
         var comment;
 
         while (cursor < comments.length) {
-            comment = comments[cursor];
-            if (comment.extendedRange[1] > node.range[0]) {
-                break;
-              }
-
-            if (comment.extendedRange[1] === node.range[0]) {
-                if (!node.leadingComments) {
-                    node.leadingComments = [];
-                  }
-                node.leadingComments.push(comment);
-                comments.splice(cursor, 1);
-              } else {
-                cursor += 1;
-              }
+          comment = comments[cursor];
+          if (comment.extendedRange[1] > node.range[0]) {
+            break;
           }
 
-                // already out of owned node
+          if (comment.extendedRange[1] === node.range[0]) {
+            if (!node.leadingComments) {
+              node.leadingComments = [];
+            }
+            node.leadingComments.push(comment);
+            comments.splice(cursor, 1);
+          } else {
+            cursor += 1;
+          }
+        }
+
+        // already out of owned node
         if (cursor === comments.length) {
-            return VisitorOption.Break;
-          }
+          return VisitorOption.Break;
+        }
 
         if (comments[cursor].extendedRange[0] > node.range[1]) {
-            return VisitorOption.Skip;
-          }
+          return VisitorOption.Skip;
+        }
       },
     });
 
@@ -820,30 +820,30 @@
         var comment;
 
         while (cursor < comments.length) {
-            comment = comments[cursor];
-            if (node.range[1] < comment.extendedRange[0]) {
-                break;
-              }
-
-            if (node.range[1] === comment.extendedRange[0]) {
-                if (!node.trailingComments) {
-                    node.trailingComments = [];
-                  }
-                node.trailingComments.push(comment);
-                comments.splice(cursor, 1);
-              } else {
-                cursor += 1;
-              }
+          comment = comments[cursor];
+          if (node.range[1] < comment.extendedRange[0]) {
+            break;
           }
 
-                // already out of owned node
+          if (node.range[1] === comment.extendedRange[0]) {
+            if (!node.trailingComments) {
+              node.trailingComments = [];
+            }
+            node.trailingComments.push(comment);
+            comments.splice(cursor, 1);
+          } else {
+            cursor += 1;
+          }
+        }
+
+        // already out of owned node
         if (cursor === comments.length) {
-            return VisitorOption.Break;
-          }
+          return VisitorOption.Break;
+        }
 
         if (comments[cursor].extendedRange[0] > node.range[1]) {
-            return VisitorOption.Skip;
-          }
+          return VisitorOption.Skip;
+        }
       },
     });
 
